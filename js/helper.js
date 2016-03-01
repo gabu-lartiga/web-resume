@@ -40,7 +40,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" alt="%title% image">';
+var HTMLprojectImage = '<img src="%data%" alt="%title% image" class="imgProject">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" target="_blank">%data%';
@@ -175,7 +175,9 @@ function initializeMap() {
     });
 
     // hmmmm, I wonder what this is about...
+    // event listener that fires off an event when each marker gets clicked
     google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.open(map, marker);
       // your code goes here!
     });
 
