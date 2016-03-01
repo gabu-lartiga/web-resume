@@ -108,8 +108,7 @@ var education = {
 
 //Functions
 bio.display = function(){
-  /*Formatted Variables*/
-  var fContact = [
+  var formattedContact = [
     HTMLmobile.replace("%data%",bio.contacts.mobile),
     HTMLemail.replace("%data%", bio.contacts.email),
     HTMLgithub.replace("%data%", bio.contacts.github),
@@ -119,9 +118,9 @@ bio.display = function(){
   $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
   $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
   //Contact information
-  for (var i = 0; i < fContact.length; i++) {
-    $("#topContacts").append(fContact[i]);
-  };
+  for (var i = 0; i < formattedContact.length; i++) {
+    $("#topContacts").append(formattedContact[i]);
+  }
   //Profile Picture
   $("#header").append(HTMLbioPic.replace("%data%",bio.bioPic));
   //Welcome Message
@@ -129,17 +128,17 @@ bio.display = function(){
   //Skills
   if(bio.skills.length > 0){
     $("#header").append(HTMLskillsStart);
-    for(j in bio.skills){
-      $("#skills").append(HTMLskills.replace("%data%", bio.skills[j]));
+    for(var skill = 0; skill < bio.skills.length; skill++){
+      $("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
     }
-  };
+  }
   //footer
-  for (var i = 0; i < fContact.length; i++) {
-  $("#footerContacts").append(fContact[i]);
-};
+  for (var fc = 0; fc < formattedContact.length; fc++) {
+  $("#footerContacts").append(formattedContact[fc]);
+}
 };
 work.display = function(){
-  for(job in work.jobs){
+  for(var job = 0; job < work.jobs.length; job++){
   $("#workExperience").append(HTMLworkStart); //workExperience is an "id"
   var emp_tit = HTMLworkEmployer.replace("%data%",work.jobs[job].employer) +
                 HTMLworkTitle.replace("%data%",work.jobs[job].position);
@@ -152,8 +151,8 @@ work.display = function(){
   }
 };
 projects.display = function(){
-  for(project in projects.projects){
-    $("#projects").append(HTMLprojectStart)
+  for(var project = 0; project < projects.projects.length; project++){
+    $("#projects").append(HTMLprojectStart);
     var ftitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
     var fdate = HTMLprojectDates.replace("%data%",projects.projects[project].date);
     var fdesc = HTMLprojectDescription.replace("%data%",projects.projects[project].description);
@@ -171,7 +170,7 @@ projects.display = function(){
   }
 };
 education.display = function(){
-  for(school in education.schools){
+  for(var school = 0; school < education.schools.length; school++){
     var fname = HTMLschoolName.replace("%data%", education.schools[school].name);
     fname = fname.replace("#", education.schools[school].url);
     var fcity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
@@ -184,8 +183,8 @@ education.display = function(){
     $(".education-entry:last").append(fgyear);
     $(".education-entry:last").append(fcity);
     $(".education-entry:last").append(fmajors);
-  };
-  for(course in education.onlineCourses){
+  }
+  for(var course = 0; course < education.onlineCourses.length; course++){
     var ftitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
     ftitle = ftitle.replace("#", education.onlineCourses[course].urlCourse);
     var fschool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
@@ -208,7 +207,7 @@ $(document).click(function(loc){
 // Locationizer... this one changes nothing
 function locationizer(work_obj){
   var locations = [];
-  for(job in work_obj.jobs){
+  for(var job = 0; job < work_obj.jobs.length; job++){
     locations.push(work_obj.jobs[job].city);
   }
   return locations;
@@ -222,8 +221,8 @@ function locationizer(work_obj){
 //   var intName = firstName +" "+ lastName;
 //   return intName;
 // }
-//what is this???
-var name = $("#name").text();
+//what is this?
+//var name = $("#name").text();
 //Displaying Sections
 bio.display();
 work.display();
