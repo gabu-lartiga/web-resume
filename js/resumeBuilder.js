@@ -213,16 +213,6 @@ function locationizer(work_obj){
   }
   return locations;
 }
-//Function for internationalize the name
-// function inName(){
-//   var name = window.name;
-//   var splitName = name.split(" ");
-//   var firstName = splitName[0].slice(0,1).toUpperCase() + splitName[0].substr(1).toLowerCase();
-//   var lastName = splitName[1].toUpperCase();
-//   var intName = firstName +" "+ lastName;
-//   return intName;
-// }
-//what is this???
 var name = $("#name").text();
 //Displaying Sections
 bio.display();
@@ -231,5 +221,4 @@ projects.display();
 education.display();
 //Interactive Map
 $("#mapDiv").append(googleMap);
-//Button
-//$("#main").append(internationalizeButton);
+
