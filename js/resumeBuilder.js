@@ -85,12 +85,12 @@ var work = {
 var projects = {
     "projects": [{
         "title": "Joan Sword",
-        "date": "February 2014",
+        "dates": "February 2014",
         "description": "Developed a metroidvania alpha game presented at GDC 2014.", //, coached by Charboost University",
         "images": ["images/sword1.png", "images/sword2.jpg"]
     }, {
         "title": "Virtual Reality Map Editor",
-        "date": "July 2015",
+        "dates": "July 2015",
         "description": "Developed a 3D map editor which was able to be travel trough using the Virtual Reality device, Oculus Rift. ",
         "images": ["images/mapEditor.jpg", "images/placeholder.png"],
 
@@ -99,7 +99,7 @@ var projects = {
         for (var project = 0; project < projects.projects.length; project++) {
             $("#projects").append(HTMLprojectStart);
             var ftitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-            var fdate = HTMLprojectDates.replace("%data%", projects.projects[project].date);
+            var fdate = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
             var fdesc = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
             var fpics = [];
             for (var img = 0; img < projects.projects[project].images.length; img++) {
