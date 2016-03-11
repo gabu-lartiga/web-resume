@@ -4,12 +4,12 @@ var bio = {
     "contacts": {
         "mobile": "+56-9-6473-6379",
         "email": "gabilartiga@gmail.com",
-        "github": "gabuchin",
+        "github": "gabu-lartiga",
         "twitter": "@gabydesuyo",
         "location": "Santiago, Chile"
     },
     "welcomeMessage": "Hi, welcome to my resume!",
-    "skills": ["programming", "drawing", "teaching", "randomness"],
+    "skills": ["C/C#", "Construct2", "Unity2D & 3D", "JavaScript","PHP","HTML", "CSS", "Java","Python", "drawing", "teaching"],
     "biopic": "images/profile.jpg",
     "display": function() {
         var formattedContact = [
@@ -45,13 +45,13 @@ var bio = {
 var work = {
     "jobs": [{
         "employer": "Adaptativamente",
-        "title": "Software Engineer & Game Developer",
+        "title": "Front-end Web Developer",
         "location": "Santiago, Chile",
         "dates": "March 2016 - Now",
         "description": "Nothing yet."
     }, {
         "employer": "Zetapp Studios",
-        "title": "Software Engineer & Game Developer",
+        "title": "Software Engineer",
         "location": "Concepción, Chile",
         "dates": "January 2015 - August 2015",
         "description": "Designed and developed a 3D Map editor interface using Unity 3D. <br>Created a save system for 3D Maps created with 3D Map editor. <br>Integrated Oculus Rift VR device with maps rendered by 3D Map editor using Unity3D and Oculus Rift library."
@@ -63,7 +63,7 @@ var work = {
         "description": "Developed interactive content and educative math games in Construct2."
     }, {
         "employer": "Amnesia Games",
-        "title": "Software Engineer & Game Developer Intern",
+        "title": "Internship/Game Developer",
         "location": "Santiago, Chile",
         "dates": "January 2014 - March 2014",
         "description": "Designed and developed videogame for nutrition and health care education in Construct 2. <br>Developed enemies and interactive objects behaviours for metroidvania game alpha using Unity 3D."
@@ -119,8 +119,8 @@ var education = {
     "schools": [{
         "name": "Universidad de Concepción",
         "location": "Concepción, Chile",
-        "degree": "Engineer",
-        "majors": ["Computer Science"],
+        "degree": "Ingeniería Civil Informática",
+        "majors": ["Computer Information Systems"],
         "dates": "2015",
         "url": "http://www.inf.udec.cl/"
     }, {
